@@ -3,10 +3,10 @@ LABEL maintainer="Sudhanshu Gangele"
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY project/techtrends/requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY . .
+COPY project/techtrends/ .
 
 EXPOSE 3111
 RUN python init_db.py
