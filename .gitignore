@@ -2,5 +2,6 @@
 .venv/
 .vagrant/
 .myvenv/
+.myenv/
 __pycache__/
 .vagrant/

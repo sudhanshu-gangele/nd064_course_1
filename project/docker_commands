@@ -1,11 +1,46 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+# docker build -t techtrends:latest .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+# docker run -d -p 7111:3111 techtrends:latest
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+# docker logs -f b825bfd2b184 
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+# sudha@LAPTOP-5S34OT3R MINGW64 ~/cloud/nd064_course_1/project/techtrends (main)
+$ docker logs -f b825bfd2b184
+ * Serving Flask app 'app'
+ * Debug mode: off
+2026-06-03 01:08:12,563 INFO WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3111
+ * Running on http://172.17.0.2:3111
+2026-06-03 01:08:12,563 INFO Press CTRL+C to quit
+2026-06-03 01:08:43,214 INFO 172.17.0.1 - - [03/Jun/2026 01:08:43] "GET / HTTP/1.1" 200 -
+2026-06-03 01:08:43,299 INFO 172.17.0.1 - - [03/Jun/2026 01:08:43] "GET /static/css/main.css HTTP/1.1" 200 -
+2026-06-03 01:08:44,510 INFO 172.17.0.1 - - [03/Jun/2026 01:08:44] "GET /favicon.ico HTTP/1.1" 404 -
+2026-06-03 01:08:59,675 DEBUG title retrieved is: 2020 CNCF Annual Report
+2026-06-03 01:08:59,678 INFO 172.17.0.1 - - [03/Jun/2026 01:08:59] "GET /1 HTTP/1.1" 200 -
+2026-06-03 01:08:59,717 INFO 172.17.0.1 - - [03/Jun/2026 01:08:59] "GET /static/css/main.css HTTP/1.1" 304 -
+2026-06-03 01:09:03,412 INFO 172.17.0.1 - - [03/Jun/2026 01:09:03] "GET / HTTP/1.1" 200 -
+2026-06-03 01:09:03,469 INFO 172.17.0.1 - - [03/Jun/2026 01:09:03] "GET /static/css/main.css HTTP/1.1" 304 -
+2026-06-03 01:09:08,440 INFO 172.17.0.1 - - [03/Jun/2026 01:09:08] "GET /create HTTP/1.1" 200 -
+2026-06-03 01:09:08,483 INFO 172.17.0.1 - - [03/Jun/2026 01:09:08] "GET /static/css/main.css HTTP/1.1" 304 -
+2026-06-03 01:09:25,844 DEBUG title created : New Post
+2026-06-03 01:09:25,845 INFO 172.17.0.1 - - [03/Jun/2026 01:09:25] "POST /create HTTP/1.1" 302 -
+2026-06-03 01:09:25,856 INFO 172.17.0.1 - - [03/Jun/2026 01:09:25] "GET / HTTP/1.1" 200 -
+2026-06-03 01:09:25,900 INFO 172.17.0.1 - - [03/Jun/2026 01:09:25] "GET /static/css/main.css HTTP/1.1" 304 -
+2026-06-03 01:09:34,196 DEBUG title retrieved is: New Post
+2026-06-03 01:09:34,197 INFO 172.17.0.1 - - [03/Jun/2026 01:09:34] "GET /7 HTTP/1.1" 200 -
+2026-06-03 01:09:34,239 INFO 172.17.0.1 - - [03/Jun/2026 01:09:34] "GET /static/css/main.css HTTP/1.1" 304 -
+2026-06-03 01:09:38,517 INFO 172.17.0.1 - - [03/Jun/2026 01:09:38] "GET / HTTP/1.1" 200 -
+2026-06-03 01:09:38,560 INFO 172.17.0.1 - - [03/Jun/2026 01:09:38] "GET /static/css/main.css HTTP/1.1" 304 -
+2026-06-03 01:09:44,402 INFO 172.17.0.1 - - [03/Jun/2026 01:09:44] "GET /metrics HTTP/1.1" 200 -
+2026-06-03 01:09:47,797 INFO 172.17.0.1 - - [03/Jun/2026 01:09:47] "GET /metrics HTTP/1.1" 200 -
+2026-06-03 01:10:45,604 INFO 172.17.0.1 - - [03/Jun/2026 01:10:45] "GET / HTTP/1.1" 200 -
+2026-06-03 01:10:45,644 INFO 172.17.0.1 - - [03/Jun/2026 01:10:45] "GET /static/css/main.css HTTP/1.1" 304 -
+2026-06-03 01:11:11,689 DEBUG title retrieved is: New Post
+2026-06-03 01:11:11,689 INFO 172.17.0.1 - - [03/Jun/2026 01:11:11] "GET /7 HTTP/1.1" 200 -
+2026-06-03 01:11:11,727 INFO 172.17.0.1 - - [03/Jun/2026 01:11:11] "GET /static/css/main.css HTTP/1.1" 304 -
+
