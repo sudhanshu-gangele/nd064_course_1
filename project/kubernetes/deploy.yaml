@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: techtrends        # Container name inside the pod
-        image: techtrends:latest # Container image to deploy
+        image: coderbuddha/techtrends:latest # Container image to deploy
         ports:
         - containerPort: 3111   # Port exposed by the application inside the container
 
