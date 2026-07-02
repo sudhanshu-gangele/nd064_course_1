@@ -1,0 +1,15 @@
+apiVersion: v2
+name: techtrends
+description: Helm chart for the TechTrends application
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+
+keywords:
+  - techtrends
+  - python
+  - flask
+
+maintainers:
+  - name: Sudhanshu
+    email: sudhanhsu.gangele@gmail.com

@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: techtrends              # Name of the Deployment
+  namespace: sandbox            # Namespace where this Deployment will run
+spec:
+  replicas: 1                   # Number of pod replicas to run
+  selector:
+    matchLabels:
+      app: techtrends           # Label selector to match pods managed by this Deployment
+  template:
+    metadata:
+      labels:
+        app: techtrends         # Labels applied to the pod; must match the selector above
+    spec:
+      containers:
+      - name: techtrends        # Container name inside the pod
+        image: coderbuddha/techtrends:latest # Container image to deploy
+        ports:
+        - containerPort: 3111   # Port exposed by the application inside the container
+
+        resources:              # Resource requests and limits
+          requests:
+            cpu: "250m"         # Minimum CPU the container is guaranteed
+            memory: "64Mi"      # Minimum memory the container is guaranteed
+          limits:
+            cpu: "500m"         # Maximum CPU the container can use
+            memory: "128Mi"     # Maximum memory the container can use
+
+        livenessProbe:          # Kubernetes checks if the app is alive
+          httpGet:
+            path: /healthz      # Endpoint used for liveness check
+            port: 3111
+          initialDelaySeconds: 5 # Wait before first check
+          periodSeconds: 10      # How often to check
+
+        readinessProbe:         # Kubernetes checks if the app is ready to receive traffic
+          httpGet:
+            path: /healthz      # Same endpoint used for readiness
+            port: 3111
+          initialDelaySeconds: 5 # Wait before first check
+          periodSeconds: 10      # How often to check
+
